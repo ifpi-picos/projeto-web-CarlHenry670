@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    color: #feee0f;
+    -webkit-text-stroke: 5px #04135d;
+    padding: 10px;
+    display: auto;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+h1:hover {
+    transform: scale(1.04);
+
+}
+
+body {
+    background-color: #9ECDE6;
+    color: #000000;
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.pokeBox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media only screen and (max-width: 768px) {
+    .pokeBox {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .pokeBox {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+}
+
+
+.pokemon {
+    background-color: rgb(208, 208, 208);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 1);
+    margin: 10px;
+    padding: 10px;
+    width: 210px;
+    text-align: center;
+    margin-bottom: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.pokemon:hover {
+    transform: scale(1.04);
+
+}
+
+.pokemon img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.pokeImg {
+    background-color: rgb(234, 233, 233);
+    border-radius: 50%;
+    box-shadow: 0 1px 6px 0 rgb(0, 0, 0);
+
+}
+
+.upon {
+    margin-top: 20px;
+}
+
+.number {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 9px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #c52424;
+    border-radius: 8px;
+    border-color: #000000;
+}
+
+button {
+    padding: 10px;
+    background-color: #04135d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+button:hover {
+
+    background-color: #152a93;
+    color: #ffffff;
+    transform: scale(1.01);
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.modal-content {
+    background-color: #d6fbfa;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: auto;
+    max-height: 500px;
+    scrollbar-color: #232323 #ffffff;
+    scrollbar-width: thin;
+    position: relative;
+    z-index: 2;
+    overflow: auto;
+    max-height: 70vh;
+
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.close {
+
+    right: 10px;
+    font-size: 40px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.close:hover {
+
+    color: rgb(255, 0, 0);
+
+}
+
+.eee {
+    /* card quando clica no pkm */
+
+    padding: 0;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #9EE6D0;
+    filter: drop-shadow(0 0 0.2rem #777777);
+    margin: 15px;
+    padding: 15px;
+    width: 240px;
+    text-align: center;
+    margin-bottom: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+.eee img {
+    width: 70%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 0.3rem #000000);
+}
+
+.eee h2.pokeName {
+
+    color: #000000;
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.eee h3.type {
+
+    color: #000000;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.eee h3.pokeWeight {
+
+    color: #000000;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.eee h3.pokeHeight {
+
+    color: #000000;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+
+
+.pokemon-info {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.moves-list,
+.evolution-list,
+.abilities-list,
+.type-advantages-list {
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #fc7f59;
+    background-color: #bdf7f9;
+    filter: drop-shadow(0 0 0.3rem #777777);
+    border-radius: 10px;
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .moves-list,
+    .evolution-list,
+    .abilities-list,
+    .type-advantages-list {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .moves-list,
+    .evolution-list,
+    .abilities-list,
+    .type-advantages-list {
+        width: 100%;
+    }
+}
+
+.moves-list h3,
+.evolution-list h3,
+.abilities-list h3,
+.type-advantages-list h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    font-weight: 900
+}
+
+strong {
+    color: #000000;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    display: block;
+
+}
+
+.evolution-list ul {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 45px;
+
+
+}
+
+.moves-list ul {
+    list-style: circle
+}
+
+.abilities-list ul {
+    list-style: square;
+    text-align: center;
+}
+
+.type-advantages-list ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.evolution-list li {
+    font-size: 16px;
+    text-align: center;
+
+}
+
