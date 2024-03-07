@@ -1,5 +1,5 @@
 const pokeBox = document.querySelector('#pokeBox');
-const pokeSize = 1016;
+const pokeSize = 150;
 
 const colors = {
     fire: '#FFA07A',

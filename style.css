@@ -7,7 +7,7 @@
 
 h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
-    font-size: 80px;
+    font-size: 100px;
     font-weight: bold;
     margin-top: 35px;
     margin-bottom: 50px;
@@ -16,8 +16,7 @@ h1 {
     padding: 10px;
     display: auto;
     cursor: pointer;
-
-
+    margin-left: 20%;
 }
 
 
@@ -116,6 +115,12 @@ input[type="text"] {
     border: 2px solid #c52424;
     border-radius: 8px;
     border-color: #000000;
+    margin-left: 15%;
+  
+}
+
+.search-bar{
+    margin-left: 12%;
 }
 
 button {
@@ -126,6 +131,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 50px;
+
 }
 
 button:hover {
@@ -350,22 +356,31 @@ strong {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
-    margin:40px;
+    justify-content: center;
+    margin: 40px;
 
 
 }
 
 .evolution-list img {
     width: 50px;
-
     height: 50px;
-
     border-radius: 50%;
-   
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     filter: drop-shadow(0 0 0.3rem #ffffff);
-  
-
-   
 }
+
+.imgBack {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url(/img/original.png);
+    background-size: cover;
+}
+
+.containerInicio{
+    margin-top: 17%;
+}
+
