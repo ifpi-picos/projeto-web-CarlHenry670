@@ -116,7 +116,20 @@ const updateNavbar = async (pokemon) => {
     await fetchEvolution(pokemon.id);
     await fetchAbilities(pokemon);
     await fetchTypeAdvantages(pokemon);
+    await fetchStats(pokemon);
 };
+const fetchStats = async (pokemon) => {
+    const statsList = document.getElementById('statsList');
+    statsList.innerHTML = '';
+    const statsHTML = `
+        <h3>Estatísticas</h3>
+        <ul>
+            ${pokemon.stats.map(stat => `<li>${stat.stat.name}: ${stat.base_stat}</li>`).join('')}
+        </ul>
+    `;
+    statsList.innerHTML = statsHTML;
+};
+
 
 const closeModal = () => {
     const modal = document.getElementById('modal');
