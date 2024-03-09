@@ -6,8 +6,8 @@ const colors = {
     grass: '#98D2A3',
     electric: '#FFE082',
     water: '#87CEEB',
-    ground: '#D2691E',  
-    rock: '#D2B48C',     
+    ground: '#D2691E',
+    rock: '#D2B48C',
     fairy: '#fceaff',
     poison: '#D8BFD8',
     bug: '#D8F8D8',
@@ -16,7 +16,7 @@ const colors = {
     flying: '#ADD8E6',
     fighting: '#CD5C5C',
     normal: '#F5F5F5',
-    ice: '#B0E0E6',       
+    ice: '#B0E0E6',
     ghost: '#7b62a3',
     steel: '#B8B8D0',
     dark: '#708090'
@@ -61,7 +61,7 @@ const createPokeCard = (poke) => {
     const firstType = poke.types[0].type.name;
     pokeEl.style.backgroundColor = colors[firstType];
     const allTypes = poke.types.map(type => type.type.name);
-    
+
     const pokeInnerHTML = `
         <div class="pokeImg">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${poke.id}.png" alt="${name}">
@@ -112,11 +112,11 @@ const updateNavbar = async (pokemon) => {
     movesList.innerHTML = movesListHTML;
 
     modal.style.display = 'block';
-     body.classList.add('no-scroll')
-     await fetchEvolution(pokemon.id);
-     await fetchAbilities(pokemon);
-     await fetchTypeAdvantages(pokemon);
-    };
+    body.classList.add('no-scroll')
+    await fetchEvolution(pokemon.id);
+    await fetchAbilities(pokemon);
+    await fetchTypeAdvantages(pokemon);
+};
 
 const closeModal = () => {
     const modal = document.getElementById('modal');
@@ -163,7 +163,7 @@ const getAdvantagesAndDisadvantages = (types) => {
 };
 
 const typeAdvantages = {
-    
+
     fire: {
         advantages: ['grass', 'bug', 'ice', 'steel'],
         disadvantages: ['water', 'rock', 'fire'],
@@ -236,7 +236,7 @@ const typeAdvantages = {
         advantages: ['psychic', 'ghost'],
         disadvantages: ['fighting', 'dark', 'fairy']
     }
-   
+
 };
 
 
@@ -298,24 +298,19 @@ const displayEvolutionRecursive = (evolution) => {
     return result;
 };
 
+const text = "A Pokédex é uma enciclopédia virtual portátil de alta tecnologia que os treinadores Pokémon transportam para registrar todas as espécies diferentes de Pokémon encontradas durante suas viagens. A Pokédex contém informações detalhadas sobre cada Pokémon, incluindo suas características, tipos, habilidades, evoluções e muito mais.";
 
-// revisa isso plmds
-const searchPokemon = () => {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const foundPokemon = pokemons.find(pokemon => (
-        pokemon.name.toLowerCase().includes(searchTerm) ||
-        pokemon.id.toString().includes(searchTerm)
-    ));
-    pokeBox.innerHTML = '';
-    if (foundPokemon) {
-        createPokeCard(foundPokemon);
-    } else {
-        displayFilteredPokemon(pokemons);
+let index = 0;
+
+function typeText() {
+    document.getElementById('description-text').textContent = text.slice(0, index);
+    index++;
+    if (index > text.length) {
+        clearInterval(typingInterval);
     }
-};
-document.querySelector('h1').addEventListener('click', function() {
-    location.reload();
-});
+}
+
+const typingInterval = setInterval(typeText, 80);
 
 
 

@@ -10,19 +10,28 @@
 </head>
 
 <body>
-        <div class="imgBack">
-            <div class="containerInicio">
-                <h1>Pokedex</h1>
-                <div class="search-bar">
-                    <input type="text" id="searchInput" placeholder="Buscar por nome ou ID">
-                    <button onclick="searchPokemon()">Buscar</button>
-                </div>
-            </div>
+    <div class="imgBack">
 
+        <div class="containerInicio">
+
+            <h1>Pokedex</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar por nome ou ID">
+                <button onclick="searchPokemon()">Buscar</button>
+
+            </div>
         </div>
-   
-    <div class="pokeBox" id="pokeBox">
+
+        <div class="description-pokedex">
+            <span id="description-text"></span>
+        </div>
     </div>
+    <div class="container">
+        <div class="pokeBox" id="pokeBox">
+        </div>
+
+    </div>
+
 
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -34,12 +43,6 @@
             <div class="abilities-list" id="abilitiesList"></div>
         </div>
     </div>
-
-
-
-
-
-
     <script src="script.js"></script>
 </body>
 
