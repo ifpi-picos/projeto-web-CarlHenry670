@@ -57,6 +57,7 @@ body {
     background-color: rgb(208, 208, 208);
     border-radius: 10px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 1);
+    filter: drop-shadow(0 0 0.3rem #ffffff);
     margin: 10px;
     padding: 10px;
     width: 210px;
@@ -187,7 +188,7 @@ button:hover {
 .eee {
     /* card quando clica no pkm */
 
-    padding: 0;
+
     border-radius: 8px;
     margin-top: 20px;
     background-color: #07061e;
@@ -211,8 +212,8 @@ button:hover {
 
 
 .eee img {
-    width: 70%;
-    max-width: 100%;
+    height: auto;
+    width: 100%;
     align-items: center;
     justify-content: center;
     filter: drop-shadow(0 0 0.3rem #000000);
@@ -412,8 +413,8 @@ img {
 .description-pokedex {
     border: 2px solid #ffffff;
     padding: 30px;
-    margin-right: 8%;
-    margin-left: 6%;
+    margin-right: 110px;
+    margin-left: 25px;
 
 
 }
