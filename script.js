@@ -1,5 +1,5 @@
 const pokeBox = document.querySelector('#pokeBox');
-const pokeSize = 1010;
+const pokeSize = 150;
 
 const colors = {
     fire: '#FFA07A',
@@ -78,6 +78,7 @@ const createPokeCard = (poke) => {
     pokeBox.appendChild(pokeEl);
     pokeEl.addEventListener('click', () => {
         updateNavbar(poke);
+        
     });
 }
 
@@ -116,18 +117,7 @@ const updateNavbar = async (pokemon) => {
     await fetchEvolution(pokemon.id);
     await fetchAbilities(pokemon);
     await fetchTypeAdvantages(pokemon);
-    await fetchStats(pokemon);
-};
-const fetchStats = async (pokemon) => {
-    const statsList = document.getElementById('statsList');
-    statsList.innerHTML = '';
-    const statsHTML = `
-        <h3>Estatísticas</h3>
-        <ul>
-            ${pokemon.stats.map(stat => `<li>${stat.stat.name}: ${stat.base_stat}</li>`).join('')}
-        </ul>
-    `;
-    statsList.innerHTML = statsHTML;
+    await fetchLocation(pokemon.id);
 };
 
 
@@ -257,13 +247,24 @@ const typeAdvantages = {
 const fetchAbilities = async (pokemon) => {
     const abilitiesList = document.getElementById('abilitiesList');
     abilitiesList.innerHTML = '';
-    const abilitiesHTML = `
-        <h3>Habilidades</h3>
-        <ul>
-            ${pokemon.abilities.map(ability => `<li>${ability.ability.name}</li>`).join('')}
-        </ul>
-    `;
-    abilitiesList.innerHTML = abilitiesHTML;
+    for (const ability of pokemon.abilities) {
+    
+        const abilityInfo = await getAbilityInfo(ability.ability.name);
+        const abilityEl = document.createElement('div');
+        abilityEl.innerHTML = `
+            
+            <h3>${ability.ability.name}</h3>
+            <p>${abilityInfo.effect_entries[0].short_effect}</p>
+        `;
+        abilitiesList.appendChild(abilityEl);
+    }
+};
+
+const getAbilityInfo = async (abilityName) => {
+    const url = `https://pokeapi.co/api/v2/ability/${abilityName}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    return data;
 };
 
 
