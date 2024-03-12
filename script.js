@@ -346,6 +346,29 @@ function typeText() {
 
 const typingInterval = setInterval(typeText, 80);
 
+const searchPokemon = async () => {
+    const searchInput = document.getElementById('searchInput');
+    const searchTerm = searchInput.value.toLowerCase().trim();
+
+    if (!searchTerm) {
+        alert('Please enter a Pokémon name or ID to search.');
+        return;
+    }
+    let filteredPokemon = [];
+    if (!isNaN(searchTerm)) { 
+        const pokemon = await getPokemon(parseInt(searchTerm));
+        filteredPokemon.push(pokemon);
+    } else {
+        filteredPokemon = pokemons.filter(pokemon => pokemon.name.includes(searchTerm));
+    }
+
+    if (filteredPokemon.length === 0) {
+        alert('No Pokémon found with the specified name or ID.');
+        return;
+    }
+
+    displayFilteredPokemon(filteredPokemon);
+};
 
 
 fetchPokemon();
