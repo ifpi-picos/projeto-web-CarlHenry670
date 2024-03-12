@@ -354,7 +354,10 @@ const searchPokemon = async () => {
         alert('Please enter a Pokémon name or ID to search.');
         return;
     }
+
     let filteredPokemon = [];
+
+  
     if (!isNaN(searchTerm)) { 
         const pokemon = await getPokemon(parseInt(searchTerm));
         filteredPokemon.push(pokemon);
