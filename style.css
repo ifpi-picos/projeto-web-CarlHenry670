@@ -338,6 +338,15 @@ strong {
  margin-bottom: 90px;
 }
 
+.ability-description {
+    max-height: 120px;
+    overflow-y: auto;
+    scrollbar-color: rgb(249, 249, 249) transparent; /* Torna a barra de rolagem transparente */
+    scrollbar-width: thin;
+}
+
+
+
 .type-advantages-list ul {
     display: flex;
     justify-content: space-between;

@@ -256,11 +256,12 @@ const fetchAbilities = async (pokemon) => {
         const description = getEnglishDescription(abilityInfo.effect_entries);
         abilityEl.innerHTML = `
             <h4>${ability.ability.name}:</h4>
-            <p>${description}</p>
+            <div class="ability-description">${description}</div> 
         `;
         abilitiesList.appendChild(abilityEl);
     }
 };
+
 
 const getAbilityInfo = async (abilityName) => {
     const url = `https://pokeapi.co/api/v2/ability/${abilityName}`;
