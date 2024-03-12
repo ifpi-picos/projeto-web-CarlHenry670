@@ -34,6 +34,11 @@ const fetchPokemon = async () => {
     displayFilteredPokemon(pokemons);
 
 }
+document.querySelector('h1').addEventListener('click', () => {
+    window.location.reload();
+});
+
+
 
 const displayFilteredPokemon = (filteredPokemon) => {
     pokeBox.innerHTML = '';
