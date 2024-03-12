@@ -93,9 +93,9 @@ const updateNavbar = async (pokemon) => {
     <section class="eee">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${pokemon.name}">
         <h2 class="pokeName">${pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</h2>
-        <h3 class="type">Tipo: ${pokemon.types.map(type => type.type.name).join('/')}</h3>
-        <h3 class = "pokeHeight">Altura: ${pokemon.height / 10}m</h3>
-        <h3 class = "pokeWeight">Peso: ${pokemon.weight / 10}kg</h3>
+        <h3 class="type">Type: ${pokemon.types.map(type => type.type.name).join('/')}</h3>
+        <h3 class = "pokeHeight">Height: ${pokemon.height / 10}m</h3>
+        <h3 class = "pokeWeight">Weight: ${pokemon.weight / 10}kg</h3>
     </section>
 `;
 
@@ -105,9 +105,9 @@ const updateNavbar = async (pokemon) => {
         .filter(move => move.version_group_details[0].level_learned_at > 0)
         .sort((a, b) => a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at);
     const movesListHTML = `
-        <h3>Golpes</h3>
+        <h3>Blows</h3>
         <ul>
-            ${filteredAndSortedMoves.map(move => `<li>${move.move.name} (Nível: ${move.version_group_details[0].level_learned_at})</li>`).join('')}
+            ${filteredAndSortedMoves.map(move => `<li>${move.move.name} (Level: ${move.version_group_details[0].level_learned_at})</li>`).join('')}
         </ul>
     `;
     movesList.innerHTML = movesListHTML;
@@ -133,7 +133,7 @@ const fetchTypeAdvantages = async (pokemon) => {
     const typeAdvantagesList = document.getElementById('typeAdvantagesList');
     typeAdvantagesList.innerHTML = '';
     const typeAdvantagesHTML = `
-        <h3> Poder </h3>
+        <h3> Power </h3>
         <ul>
             ${getAdvantagesAndDisadvantages(pokemon.types)}
         </ul>
@@ -152,11 +152,11 @@ const getAdvantagesAndDisadvantages = (types) => {
         result.push('<ul>');
 
         if (advantages.length > 0) {
-            result.push(`<li>Vantagens contra: ${advantages.join(', ')}</li>`);
+            result.push(`<li>Advantages against: ${advantages.join(', ')}</li>`);
         }
 
         if (disadvantages.length > 0) {
-            result.push(`<li>Desvantagens contra: ${disadvantages.join(', ')}</li>`);
+            result.push(`<li>Disadvantages against: ${disadvantages.join(', ')}</li>`);
         }
 
         result.push('</ul></li>');
@@ -242,19 +242,21 @@ const typeAdvantages = {
 
 };
 
-
-
 const fetchAbilities = async (pokemon) => {
     const abilitiesList = document.getElementById('abilitiesList');
     abilitiesList.innerHTML = '';
+
+    const titleEl = document.createElement('h3');
+    titleEl.textContent = "Ability";
+    abilitiesList.appendChild(titleEl);
+
     for (const ability of pokemon.abilities) {
-    
         const abilityInfo = await getAbilityInfo(ability.ability.name);
         const abilityEl = document.createElement('div');
+        const description = getEnglishDescription(abilityInfo.effect_entries);
         abilityEl.innerHTML = `
-            
-            <h3>${ability.ability.name}</h3>
-            <p>${abilityInfo.effect_entries[0].short_effect}</p>
+            <h4>${ability.ability.name}:</h4>
+            <p>${description}</p>
         `;
         abilitiesList.appendChild(abilityEl);
     }
@@ -266,6 +268,18 @@ const getAbilityInfo = async (abilityName) => {
     const data = await res.json();
     return data;
 };
+
+const getEnglishDescription = (effectEntries) => {
+    for (const entry of effectEntries) {
+        if (entry.language.name === "en") {
+            return entry.effect;
+        }
+    }
+    return effectEntries[0].effect;
+};
+
+
+
 
 
 const fetchEvolution = async (pokemonId) => {
@@ -283,7 +297,7 @@ const displayEvolution = (evolutionChain) => {
     const evolutionList = document.getElementById('evolutionList');
     evolutionList.innerHTML = '';
     const evolutionHTML = `
-        <h3>Árvore de Evolução</h3>
+        <h3> Tree Evolution </h3>
         <ul>
             ${displayEvolutionRecursive(evolutionChain)}
         </ul>
@@ -298,9 +312,9 @@ const displayEvolutionRecursive = (evolution) => {
         const details = evolution.evolution_details[0];
 
         if (details.min_level) {
-            result += ` (Nível: ${details.min_level})`;
+            result += ` (Level: ${details.min_level})`;
         } else if (details.item) {
-            result += ` (Usando ${details.item.name})`;
+            result += ` (Using ${details.item.name})`;
         }
     }
 

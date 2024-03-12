@@ -19,6 +19,15 @@ h1 {
 
 }
 
+h4{
+   color: white;
+    margin-bottom: 1.5em;
+    margin-top: 2em;
+    font-size: 1em;
+    font-weight: 900;
+    
+}
+
 body {
     background-color: #000108;
     color: #000000;
@@ -267,7 +276,6 @@ button:hover {
 .abilities-list,
 .type-advantages-list {
     width: calc(25% - 10px);
-
     margin-bottom: 20px;
     padding: 20px;
     color: #fc7f59;
@@ -322,12 +330,12 @@ strong {
 
 
 .moves-list ul {
-    list-style: circle
+    list-style: circle;
+    text-align: center;
 }
 
-.abilities-list ul {
-    list-style: square;
-    text-align: center;
+.abilities-list ul{
+ margin-bottom: 90px;
 }
 
 .type-advantages-list ul {

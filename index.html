@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -16,8 +16,8 @@
 
             <h1>Pokédex</h1>
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Buscar por nome ou ID">
-                <button onclick="searchPokemon()">Buscar</button>
+                <input type="text" id="searchInput" placeholder="Search by name or ID">
+                <button onclick="searchPokemon()">Search</button>
 
             </div>
         </div>
@@ -34,7 +34,6 @@
 
 
     <div id="modal" class="modal">
-        
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <div class="pokemon-info" id="pokemonInfo"></div>
@@ -42,8 +41,7 @@
             <div class="type-advantages-list" id="typeAdvantagesList"></div>
             <div class="evolution-list" id="evolutionList"></div>
             <div class="abilities-list" id="abilitiesList"></div>
-            
-
+        
         </div>
     </div>
     <script src="script.js"></script>
