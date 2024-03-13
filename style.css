@@ -19,13 +19,13 @@ h1 {
 
 }
 
-h4{
-   color: white;
+h4 {
+    color: white;
     margin-bottom: 1.5em;
     margin-top: 2em;
     font-size: 1em;
     font-weight: 900;
-    
+
 }
 
 body {
@@ -63,7 +63,7 @@ body {
 
 
 .pokemon {
-    background-color: rgb(208, 208, 208);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 1);
     filter: drop-shadow(0 0 0.3rem #ffffff);
@@ -334,14 +334,15 @@ strong {
     text-align: center;
 }
 
-.abilities-list ul{
- margin-bottom: 90px;
+.abilities-list ul {
+    margin-bottom: 90px;
 }
 
 .ability-description {
     max-height: 120px;
     overflow-y: auto;
-    scrollbar-color: rgb(249, 249, 249) transparent; /* Torna a barra de rolagem transparente */
+    scrollbar-color: rgb(249, 249, 249) transparent;
+    /* Torna a barra de rolagem transparente */
     scrollbar-width: thin;
 }
 
@@ -470,6 +471,74 @@ img {
 }
 
 .container {
-    background-color: #000000;
+    background-color: #ffffff;
 
+}
+
+/* STYLE DA PÁGINA DE MEGA EVOLUÇÃO */
+
+.imgBack-M {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+   justify-content: center;
+    align-items:center;
+    justify-content: center;
+    background-image: url(/img//mega-evolution.2.jpg);
+    background-size: cover;
+}
+
+.inicio{
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+
+
+  
+.bloco_um{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.bloco_dois{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bloco_dois img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 1);
+    filter: drop-shadow(0 0 0.3rem #ffffff);
+    padding: 15px;
+}
+  
+
+.p-inicio{
+    background: linear-gradient(to right, #ff6ef8, #24f08a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 75px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.p-m-inicio{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: justify;
+    width: 100%;
+}
+
+.aaa{
+    background-color: #2D2D2D;
 }
