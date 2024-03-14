@@ -83,7 +83,7 @@ const createPokeCard = (poke) => {
     pokeBox.appendChild(pokeEl);
     pokeEl.addEventListener('click', () => {
         updateNavbar(poke);
-        
+
     });
 }
 
@@ -357,8 +357,8 @@ const searchPokemon = async () => {
 
     let filteredPokemon = [];
 
-  
-    if (!isNaN(searchTerm)) { 
+
+    if (!isNaN(searchTerm)) {
         const pokemon = await getPokemon(parseInt(searchTerm));
         filteredPokemon.push(pokemon);
     } else {
