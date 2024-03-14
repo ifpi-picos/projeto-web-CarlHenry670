@@ -66,7 +66,7 @@ body {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 1);
-    filter: drop-shadow(0 0 0.3rem #ffffff);
+    filter: drop-shadow(0 0 0.2rem #290025);
     margin: 10px;
     padding: 10px;
     width: 210px;
@@ -539,9 +539,6 @@ img {
     font-weight: bold;
 }
 
-.container-e {
-    background-color: #000215;
-}
 
 .container-lend {
     background-color: #000000;
@@ -620,7 +617,7 @@ img {
 }
 
 .container-y-m img {
-    width: 28%;
+    width: 25%;
     height: 80%;
     border-radius: 10px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 5);
@@ -631,13 +628,15 @@ img {
 }
 
 .p-sub-tit {
-    /* background: linear-gradient(to bottom, #24f08a, #ff6ef8); */
-    background-color: rgb(249, 249, 249);
+    background: linear-gradient(to bottom, #686868, #ffffff);
+    background-color: rgb(255, 255, 255);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
     margin-bottom: 100px;
     margin-top: 100px;
-
+}
+.container-e{
+    background-color: #b8b8b8;
 }
