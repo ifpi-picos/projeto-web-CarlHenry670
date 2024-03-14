@@ -390,7 +390,7 @@ strong {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    background-image: url(/img/glazed-pokeball-planetx-wallpaper.png);
+    background-image: url("./img/glazed-pokeball-planetx-wallpaper.png");
     background-size: cover;
 }
 
@@ -485,7 +485,7 @@ img {
     justify-content: center;
     align-items: center;
     justify-content: center;
-    background-image: url(/img//mega-evolution-3.jpg);
+    background-image: url("./img//mega-evolution-3.jpg");
     background-size: cover;
 }
 
