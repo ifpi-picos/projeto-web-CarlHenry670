@@ -471,7 +471,7 @@ img {
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: #000108;
 
 }
 
@@ -481,15 +481,14 @@ img {
     height: 100vh;
     width: 100%;
     display: flex;
-   justify-content: center;
-    align-items:center;
     justify-content: center;
-    background-image: url(/img//mega-evolution.2.jpg);
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img//mega-evolution-3.jpg);
     background-size: cover;
 }
 
-.inicio{
-   
+.inicio {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -498,9 +497,7 @@ img {
     gap: 30px;
 }
 
-
-  
-.bloco_um{
+.bloco_um {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -508,23 +505,24 @@ img {
     width: 40%;
 }
 
-.bloco_dois{
+.bloco_dois {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.bloco_dois img{
-    width: 100%;
+
+.bloco_dois img {
+    width: 80%;
     height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 1);
     filter: drop-shadow(0 0 0.3rem #ffffff);
     padding: 15px;
 }
-  
 
-.p-inicio{
+
+.p-inicio {
     background: linear-gradient(to right, #ff6ef8, #24f08a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -532,13 +530,102 @@ img {
     font-weight: bold;
     margin-bottom: 10px;
 }
-.p-m-inicio{
+
+.p-m-inicio {
     color: #ffffff;
     font-size: 20px;
     text-align: justify;
     width: 100%;
+    font-weight: bold;
 }
 
-.aaa{
-    background-color: #2D2D2D;
+.container-e {
+    background-color: #000215;
+}
+
+.container-lend {
+    background-color: #000000;
+}
+
+.container-Groundon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container-Groundon img {
+    width: 32%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 5);
+    filter: drop-shadow(0 0 0.3rem #ffffff);
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.text-g {
+    text-align: justify;
+    font-size: 20px;
+    width: 50%;
+    color: #ffffff;
+}
+
+.container-Kyogre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container-Kyogre img {
+    width: 36%;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 5);
+    filter: drop-shadow(0 0 0.3rem #ffffff);
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.container-y {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container-y img {
+    width: 32%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 5);
+    filter: drop-shadow(0 0 0.3rem #ffffff);
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.container-y-m {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container-y-m img {
+    width: 28%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 5);
+    filter: drop-shadow(0 0 0.3rem #ffffff);
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
