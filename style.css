@@ -493,6 +493,7 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     width: 100%;
     gap: 30px;
 }
@@ -503,6 +504,7 @@ img {
     align-items: center;
     justify-content: center;
     width: 40%;
+    margin-left: 80px;
 }
 
 .bloco_dois {
@@ -526,9 +528,9 @@ img {
     background: linear-gradient(to right, #ff6ef8, #24f08a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 75px;
+    font-size: 70px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 45px;
 }
 
 .p-m-inicio {
@@ -680,15 +682,16 @@ img {
     align-items: center;
 }
 
-/* responsividade */
+/* responsividade tela 01*/
 
 @media only screen and (max-width: 1290px) {
     .imgBack {
         flex-direction: column;
         margin-bottom: 10px;
         height: 90vh;
-        
+
     }
+
     .containerInicio {
         display: flex;
         flex-direction: column;
@@ -696,12 +699,15 @@ img {
         align-items: center;
         margin-right: 150px;
     }
+
     h1 {
         font-size: 120px;
     }
+
     .search-bar {
         margin-left: 10px;
     }
+
     .description-pokedex {
         width: 45%;
         margin: 10px 0;
@@ -730,7 +736,7 @@ img {
 
     .description-pokedex {
         width: 60%;
-        margin: 10px 0;     
+        margin: 10px 0;
         padding: 10px;
     }
 }
@@ -751,5 +757,77 @@ img {
     .description-pokedex {
         padding: 5px;
         margin: 5px;
+    }
+}
+
+/*responsividade tela 02 */
+
+@media only screen and (max-width: 1290px) {
+    .inicio {
+        display: flex;
+        background-size: contain;
+        background-position: center;
+        flex-direction: row;
+ 
+    }
+
+    .bloco_um {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        margin-left: 80px;
+    }
+
+    .p-inicio {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+    .p-m-inicio{
+        font-size: 17px;
+    }
+    .bloco_dois {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .inicio {
+        flex-direction: column;
+        background-size: contain;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+    .bloco_um {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        margin-left: -30px;
+    }
+
+    .p-inicio {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+    .p-m-inicio{
+        font-size: 15px;
+    }
+    .bloco_dois {
+        width: 65%;
+     
+    }
+}
+
+ @media only screen and (max-width: 480px) {
+    .inicio {
+        background-size: contain;
+        height: auto;
+        padding: 10px;
+    }
+    .bloco_dois {
+        width: 100%;
+     
     }
 }
