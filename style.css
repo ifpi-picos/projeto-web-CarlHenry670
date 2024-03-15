@@ -394,12 +394,12 @@ strong {
 }
 
 .containerInicio {
-    margin-left: 20%;
+    margin-left: 140px;
 
 }
 
 .search-bar {
-    margin-left: 15%;
+    margin-left: 60px;
 }
 
 .imgContainer {
@@ -637,7 +637,8 @@ img {
     margin-bottom: 100px;
     margin-top: 100px;
 }
-.back_tit{
+
+.back_tit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -645,9 +646,11 @@ img {
     width: 100%;
 
 }
-.container-e{
+
+.container-e {
     background-color: #a7a7a7;
 }
+
 #floatingButton {
     position: fixed;
     bottom: 20px;
@@ -679,3 +682,74 @@ img {
 
 /* responsividade */
 
+@media only screen and (max-width: 1290px) {
+    .imgBack {
+        flex-direction: column;
+        margin-bottom: 10px;
+        height: 90vh;
+        
+    }
+    .containerInicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 150px;
+    }
+    h1 {
+        font-size: 120px;
+    }
+    .search-bar {
+        margin-left: 10px;
+    }
+    .description-pokedex {
+        width: 45%;
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .imgBack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .containerInicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 115px;
+    }
+
+    .description-pokedex {
+        width: 60%;
+        margin: 10px 0;     
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .imgBack {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: 90px;
+        -webkit-text-stroke: 4.5px #04135d;
+
+    }
+
+    .containerInicio,
+    .description-pokedex {
+        padding: 5px;
+        margin: 5px;
+    }
+}
