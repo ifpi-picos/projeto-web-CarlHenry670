@@ -543,7 +543,7 @@ img {
 
 
 .container-lend {
-    background-color: #000000;
+    background-color: #000108;
 }
 
 .container-Groundon {
@@ -636,22 +636,26 @@ img {
     -webkit-text-fill-color: transparent;
     font-size: 60px;
     font-weight: bold;
-    margin-bottom: 100px;
-    margin-top: 100px;
+   margin-bottom:150px;
+    margin-top: 150px;
+    text-align: center;
 }
 
 .back_tit {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #000108;
     width: 100%;
 
 }
 
 .container-e {
-    background-color: #a7a7a7;
+    background-color: #111111;
+ padding: 15px;
+ border-radius: 40px;
 }
+
 
 #floatingButton {
     position: fixed;
@@ -768,7 +772,7 @@ img {
         background-size: contain;
         background-position: center;
         flex-direction: row;
- 
+
     }
 
     .bloco_um {
@@ -783,12 +787,24 @@ img {
         font-size: 50px;
         margin-bottom: 30px;
     }
-    .p-m-inicio{
+
+    .p-m-inicio {
         font-size: 17px;
     }
+
     .bloco_dois {
         width: 100%;
     }
+
+    .text-g {
+        font-size: 15.5px;
+    }
+
+    .container-lend{
+        margin-bottom: 50px;
+       
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -799,6 +815,7 @@ img {
         padding: 20px;
         justify-content: center;
     }
+
     .bloco_um {
         width: 80%;
         display: flex;
@@ -811,23 +828,55 @@ img {
         font-size: 50px;
         margin-bottom: 30px;
     }
-    .p-m-inicio{
+    .p-m-inicio {
         font-size: 15px;
     }
     .bloco_dois {
         width: 65%;
-     
     }
-}
+  .container-lend{
+       margin-bottom: 50px;
+  }
+    .text-g {
+        font-size: 13.5px;
+    }
 
- @media only screen and (max-width: 480px) {
+    .container-Groundon img {
+        width: 40%;
+    }
+
+
+    .container-Kyogre img {
+        width: 40%;
+    }
+
+
+    .container-y img {
+        width: 40%;
+    }
+
+    .container-y-m img {
+        width: 35%;
+    }
+
+}
+@media only screen and (max-width: 480px) {
     .inicio {
         background-size: contain;
         height: auto;
         padding: 10px;
     }
+
     .bloco_dois {
         width: 100%;
-     
+
+    }
+    .text-g {
+        font-size: 11px;
+    }
+    .container-lend{
+        margin-bottom: 50px;
+       margin-left: 20px;
+       margin-right: 20px;
     }
 }
